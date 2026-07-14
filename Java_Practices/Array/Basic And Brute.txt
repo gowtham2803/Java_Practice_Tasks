@@ -1,0 +1,696 @@
+Level 1 — Basic Traversal
+1. Print all elements of an array
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40,50};
+
+      for (int i=0; i<arr.length-1; i++){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+2. Print array elements in reverse order
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40,50};
+
+      for (int i=arr.length-1; i>=0; i--){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+3. Print elements at even indexes
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40,50};
+
+      for (int i=0; i<arr.length; i+=2){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+4. Print elements at odd indexes
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40,50};
+
+      for (int i=1; i<arr.length; i+=2){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+Level 2 — Basic Calculations
+5. Find the sum of all elements
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40,50};
+      int sum = 0;
+
+      for (int i=0; i<arr.length; i++){
+        sum = sum + arr[i];
+      }
+      System.out.println(sum);
+    }
+}
+
+6. Find the average of array elements
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40};
+      int sum = 0;
+
+
+      for (int i=0; i<arr.length; i++){
+        sum = sum + arr[i];
+      }
+      int average = sum/arr.length;
+      System.out.println(average);
+    }
+}
+
+7. Count the total number of elements
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,40};
+      int Count = 0;
+
+
+      for (int i=0; i<arr.length; i++){
+        Count++;
+      }
+      System.out.println(Count);
+    }
+}
+
+Level 3 — Conditions
+8. Print all even numbers
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 15, 20, 25, 30};
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]%2==0){
+          System.out.println(arr[i]);
+        }
+      }
+    }
+}
+
+9. Print all odd numbers
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 15, 20, 25, 30};
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]%2!=0){
+          System.out.println(arr[i]);
+        }
+      }
+    }
+}
+
+10. Count even and odd numbers
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 15, 20, 25, 30};
+      int even =0;
+      int odd = 0;
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]%2==0){
+          even++;
+        }
+        else if(arr[i]%2!=0){
+          odd++;
+        }
+      }
+      System.out.println("Even Numbers = "+even);
+      System.out.println("Odd Numbers = "+odd);
+    }
+}
+
+11. Count positive, negative, and zero elements
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {-10, 20, 0, -5, 30};
+      int positive =0;
+      int negative = 0;
+      int zeros = 0;
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]>0){
+          positive++;
+        }
+        else if(arr[i]<0){
+          negative++;
+        }
+        else{
+          zeros++;
+        }
+      }
+      System.out.println("Positive Count = "+positive);
+      System.out.println("Negative Count = "+negative);
+      System.out.println("Zero Count = "+zeros);
+    }
+}
+
+Level 4 — Maximum and Minimum
+12. Find the largest element
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 50, 20, 80, 30};
+      int largest = 0;
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]>largest){
+          largest = arr[i];
+        }
+      }
+      System.out.println("largest Number is = "+largest);
+    }
+}
+
+13. Find the smallest element
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 50, 20, 5, 30};
+      int smallest = arr[0];
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]<smallest){
+          smallest = arr[i];
+        }
+      }
+      System.out.println("Smallest Number is = "+smallest);
+    }
+}
+
+14. Find both maximum and minimum
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 50, 20, 5, 80};
+      int maximum = arr[0];
+      int minimum = arr[0];
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]>maximum){
+          maximum = arr[i];
+        }
+        else if(arr[i]<minimum){
+          minimum = arr[i];
+        }
+      }
+      System.out.println("Maximum Number is = "+maximum);
+      System.out.println("Minimum Number is = "+minimum);
+    }
+}
+
+Level 5 — Searching
+15. Search for an element — Linear Search
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30, 40, 50};
+      int target = 30;
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]==target){
+          System.out.println("Element Found");
+        }
+      }
+    }
+}
+
+16. Find the index of an element
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30, 40};
+      int target = 30;
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]==target){
+          System.out.println("Index =" +i);
+        }
+      }
+    }
+}
+
+17. Count the occurrences of an element
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 10, 30, 10};
+      int target = 10;
+      int count = 0;
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]==target){
+          count++;
+        }
+      }
+      System.out.println("Total Occurences is =" + count);
+    }
+}
+
+Level 6 — Array Manipulation
+18. Copy one array into another
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30};
+      int [] copy = new int[arr.length];
+
+      for (int i=0; i<arr.length; i++){
+        copy[i]=arr[i];
+      }
+      for (int i=0; i<copy.length; i++){
+        System.out.println(copy[i]);
+      }
+    }
+}
+
+19. Add a number to every element
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30};
+      int add = 5;
+
+      for (int i=0; i<arr.length; i++){
+        arr[i]=arr[i]+add;
+      }
+      for (int i=0; i<arr.length; i++){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+20. Multiply every element by 2
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30};
+      int add = 5;
+
+      for (int i=0; i<arr.length; i++){
+        arr[i]=arr[i]*2;
+      }
+      for (int i=0; i<arr.length; i++){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+21. Replace all negative numbers with zero
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {-10, 20, -30, 40};
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]<0){
+          arr[i]=0;
+        }
+      }
+      for (int i=0; i<arr.length; i++){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+Level 7 — Reverse Problems
+22. Print an array in reverse order
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30, 40};
+      for (int i=arr.length-1; i>=0; i--){
+        System.out.println(arr[i]);
+      }
+    }
+}
+
+23. Actually reverse the array
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30, 40,50};
+
+      int left = 0;
+      int right = arr.length-1;
+
+      while(left<right){
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        left++;
+        right--;
+      }
+      System.out.println(Arrays.toString(arr));
+    }
+}
+
+Level 8 — Second Largest / Second Smallest
+24. Find the second-largest element
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 50, 20, 80, 30};
+
+      int largest = arr[0];
+      int smallest = arr[0];
+      int secondlargest = arr[1];
+      int secondsmallest = arr[1];
+
+      for (int i=0; i<arr.length; i++){
+        if(arr[i]>largest){
+          largest = arr[i];
+        }
+        if (arr[i]<smallest){
+          smallest = arr[i];
+        }
+      }
+      for (int i=0; i<arr.length; i++){
+        if(largest>arr[i]&&secondlargest<arr[i]){
+          secondlargest = arr[i];
+        }
+        if (smallest<arr[i]&&secondsmallest>arr[i]){
+          secondsmallest = arr[i];
+        }
+      }
+      System.out.println("Largest Element : "+largest);
+      System.out.println("Smallest Element : "+smallest);
+      System.out.println("Second Largest Element : "+secondlargest);
+      System.out.println("Second Smallest Element : "+secondsmallest);
+    }
+}
+
+Level 9 — Order and Comparison
+26. Check whether an array is sorted
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30, 40, 50};
+      boolean issorted = true;
+
+      for (int i=0; i<arr.length-1; i++){
+        if(arr[i]>arr[i+1]){
+          issorted = false;
+          break;
+        }
+      }
+
+      if(issorted==true){
+        System.out.println("Sorted");
+      }
+      else{
+        System.out.println("Not Sorted");
+      }
+    }
+}
+
+27. Compare two arrays
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30};
+      int [] arr2 = {10, 50, 10};
+      boolean result = true;
+
+      if(arr.length!=arr2.length){
+        result = false;
+      }
+      else{
+        for (int i=0; i<arr.length; i++){
+          if(arr[i]!=arr2[i]){
+            result = false;
+            break;
+          }
+        }
+      }
+      if(result==true){
+        System.out.println("Equal");
+      }
+      else{
+        System.out.println("Not Equal");
+      }
+    }
+}
+
+Level 10 — Duplicates
+28. Find duplicate elements
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = {10, 20, 30, 10, 20, 10, 20};
+
+        System.out.println("Duplicate elements:");
+
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = i + 1; j < arr.length; j++) {
+
+                if (arr[i] == arr[j]) {
+                    System.out.println(arr[i]);
+                    break;
+                }
+            }
+        }
+    }
+}
+
+29. Find unique elements
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10, 20, 30, 10, 20, 10,};
+
+
+      for (int i=0; i<arr.length; i++){
+        int count = 0;
+        for(int j=0; j<arr.length; j++){
+          if(arr[i]==arr[j]){
+            count++;
+          }
+        }
+        if(count==1){
+          System.out.print(arr[i]+" ");
+        }
+      }
+    }
+}
+
+30. Find the frequency of each element
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {10,20,30,10,10,20,40};
+
+      for (int i=0; i<arr.length; i++){
+
+        boolean alreadyChecked = false;
+
+        for(int j=0; j<i; j++){
+          if(arr[i]==arr[j]){
+            alreadyChecked = true;
+            break;
+          }
+        }
+
+        if(alreadyChecked==true){
+          continue;
+        }
+
+        int count = 0;
+        for( int k=0; k<arr.length; k++){
+          if(arr[i]==arr[k]){
+            count++;
+          }
+        }
+        System.out.println(arr[i]+" -> "+count+" Times");
+      }
+    }
+}
+
+
+Level 11 — Common Interview Problems
+31. Move all zeros to the end
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {1, 0, 2, 0, 3};
+      int index = 0;
+
+      for ( int i=0; i<arr.length; i++){
+        if(arr[i]!=0){
+          arr[index] = arr[i];
+          index++;
+        }
+      }
+
+      while(index<arr.length){
+        arr[index] = 0;
+        index++;
+      }
+      System.out.println(Arrays.toString(arr));
+    }
+}
+
+32. Find the missing number
+public class Main {
+    public static void main(String[] args) {
+
+      int [] arr = {1, 2, 3, 4, 8};
+
+      for (int i=0; i<arr.length-1; i++){
+
+        for (int j=arr[i]+1; j<arr[i+1]; j++){
+          System.out.print(j+" ");
+        }
+      }
+    }
+}
+
+32. Find the missing number
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = {1, 2, 4, 5};
+
+        int n = arr.length + 1;
+
+        int expecSum = n * (n+1) /2;
+
+        int actulaSum = 0;
+
+        for ( int i=0; i<arr.length; i++){
+          actulaSum += arr[i];
+        }
+
+        int missing = expecSum-actulaSum;
+
+        System.out.println(missing);
+    }
+}
+
+33. Merge two arrays
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr1 = {1, 2, 3};
+        int[] arr2 = {4, 5, 6};
+        int[] newarr = new int [arr1.length+arr2.length];
+
+        int index = 0;
+
+        for (int i=0; i<arr1.length; i++){
+          newarr[index] = arr1[i];
+          index++;
+        }
+
+        for (int i=0; i<arr2.length; i++){
+          newarr[index] = arr2[i];
+          index++;
+        }
+
+        System.out.println(Arrays.toString(newarr));
+    }
+}
+
+34.Find common elements between two arrays
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr1 = {1, 2, 4};
+        int[] arr2 = {4, 1, 6};
+
+        for (int i=0; i<arr1.length; i++){
+          for (int j=0; j<arr2.length; j++){
+            if(arr1[i]==arr2[j]){
+              System.out.print(arr1[i]+" ");
+            }
+          }
+        }
+    }
+}
+
+
+35. Find a pair with a given sum
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = {1, 2, 4,5,11,7};
+        int target = 9;
+
+        for (int i=0; i<arr.length; i++){
+          for (int j=i+1; j<arr.length; j++){
+            if(arr[i]+arr[j]==target){
+              System.out.println("The Pair is : "+arr[i]+" and "+arr[j]);
+            }
+          }
+        }
+    }
+}
+
+36. Manual Bubble Sort Array
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = {20, 0, 8,5,11,7};
+
+        for (int i=0; i<arr.length; i++){
+
+          for (int j=0; j<arr.length-1; j++){
+            if(arr[j]>arr[j+1]){
+              int temp = arr[j];
+              arr[j] = arr[j+1];
+              arr[j+1] = temp;
+            }
+          }
+        }
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
+
+37.Build in Bubble Sort Array
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+
+        int[] arr = {20, 0, 8,5,11,7};
+
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr));
+    }
+}
+
