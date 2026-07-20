@@ -1,0 +1,109 @@
+Problem 1 Easy
+public class mobile{
+    String brand;
+    int price;
+    mobile(){
+        brand = "Samsung";
+        price = 20000;
+        System.out.println(brand);
+        System.out.println(price);
+    }
+    mobile(String brand){
+        price = 25000;
+        System.out.println(brand);
+        System.out.println(price);
+    }
+    mobile(String brand,int price){
+        System.out.println(brand);
+        System.out.println(price);
+    }
+    public static void main(String[]atgs){
+        mobile m1 = new mobile();
+        mobile m2 = new mobile("Nokia");
+        mobile m3 = new mobile("Apple",85000);
+    }
+}
+
+Problem 2 Medium
+public class Laptop{
+    String brand;
+    String model;
+    int ram;
+    int price;
+
+    Laptop(){
+        this("Dell","Inspiron",8,50000);
+    }
+    Laptop(String brand){
+        this(brand,"Unknown",8,50000);
+    }
+    Laptop(String brand,String model){
+        this(brand,model,16,70000);
+    }
+    Laptop(String brand,String model,int ram,int price){
+        this.brand = brand;
+        this.model = model;
+        this.ram = ram;
+        this.price = price;
+    }
+    void display(){
+        System.out.println("Brand : "+brand);
+        System.out.println("Price : "+model);
+        System.out.println("Ram : "+ram);
+        System.out.println("Price : "+price);
+        System.out.println();
+    }
+    public static void main(String [] args){
+        Laptop l1 = new Laptop();
+        Laptop l2 = new Laptop("HP");
+        Laptop l3 = new Laptop("Asus","Vivobook");
+        Laptop l4 = new Laptop("Macbook","Air4",12,185000);
+
+        l1.display();
+        l2.display();
+        l3.display();
+        l4.display();
+    }
+}
+
+Problem 3 Hard
+public class Employee {
+    int id;
+    String name;
+    String department;
+    double salary;
+
+    Employee() {
+        this(101, "Unknown", "Trainee", 15000);
+    }
+    Employee(String name) {
+        this(101, name, "Trainee", 15000);
+    }
+    Employee(String name, String department) {
+        this(102, name, department, 30000);
+    }
+    Employee(int id, String name, String department, double salary) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+    }
+    void display() {
+        System.out.println("ID         : " + id);
+        System.out.println("Name       : " + name);
+        System.out.println("Department : " + department);
+        System.out.println("Salary     : " + salary);
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        Employee e2 = new Employee("Tony");
+        Employee e3 = new Employee("Steve", "Developer");
+        Employee e4 = new Employee(110, "Stark", "Manager", 85000);
+
+        e1.display();
+        e2.display();
+        e3.display();
+        e4.display();
+    }
+}
