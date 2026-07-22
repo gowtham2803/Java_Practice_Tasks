@@ -1,0 +1,197 @@
+Exsercise 1 :
+class Employee {
+    String name;
+    static String company = "OpenAI";
+
+    Employee(String name){
+        this.name = name;
+    }
+
+    void display(){
+        System.out.printf("name : %s | company : %s%n",name,company);
+    }
+    public static void main(String[] args) {
+        Employee e1 = new Employee("Gowtham");
+        Employee e2 = new Employee("Stark");
+
+        e1.display();
+        e2.display();
+    }
+}
+
+Exsercise 2 :
+class Student {
+    String name;
+    static String college = "SLA";
+
+    Student(String name){
+        this.name = name;
+    }
+
+    void display(){
+        System.out.printf("name : %s | College : %s%n",name,college);
+    }
+    public static void main(String[] args) {
+        Student s1 = new Student("Gowtham");
+        Student s2 = new Student("Stark");
+
+        s1.display();
+        s2.display();
+
+        Student.college = "IIT";
+        System.out.println("----------After Changing------------");
+
+        s1.display();
+        s2.display();
+    }
+}
+
+Exsercise 3 :
+class Calculator {
+
+    static void add(int a,int b){
+        System.out.println("Total Sum : "+(a+b));
+    }
+
+    public static void main(String[] args) {
+        Calculator.add(10,20);
+    }
+}
+
+
+Exsercise 4:
+class Calculator {
+
+    int a = 10;
+    static int b = 20;
+
+    void instanceMethod() {
+        System.out.println(a);
+        System.out.println(b);
+        staticMethod();
+    }
+
+    static void staticMethod() {
+        System.out.println(b);   // ✅
+    }
+    public static void main(String[] args) {
+        Calculator c = new Calculator();
+        c.instanceMethod();
+        Calculator.staticMethod();
+    }
+}
+
+Exsercise 5 :
+class Test {
+
+    static {
+        System.out.println("Static Block");
+    }
+
+    {
+        System.out.println("Instance Block");
+    }
+
+    Test() {
+        System.out.println("Constructor");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("Main Started");
+        Test t1 = new Test();
+        Test t2 = new Test();
+    }
+}
+
+Output:
+Static Block
+Main Started
+Instance Block
+Constructor
+Instance Block
+Constructor
+
+Exsercise 6:
+class Student {
+
+    static String college = "SLA";
+    String name;
+
+    Student(String name) {
+        this.name = name;
+    }
+
+    public static void main(String[] args) {
+
+        Student s1 = new Student("Tony");
+        Student s2 = new Student("Steve");
+
+        s1.college = "IIT";
+
+        System.out.println(s2.college);
+    }
+}
+OUTPUT : IIT  | A static variable belongs to the class and has only one shared copy.
+Any modification made through one object or the class itself is visible to all objects.
+
+Exsercise 7:
+class Demo {
+
+    int x = 10;
+    static int y = 20;
+
+    static void display() {
+
+        System.out.println(x);
+        System.out.println(y);
+
+    }
+
+    public static void main(String[] args) {
+
+        display();
+
+    }
+}
+OUTPUT : A static method belongs to the class and can directly access only static members.
+It cannot directly access instance variables or instance methods because they belong to objects.
+
+Exsercise 8:
+class Test {
+
+    static int x = 10;
+
+    static {
+        System.out.println("Static Block");
+        x = 20;
+    }
+
+    {
+        System.out.println("Instance Block");
+        x++;
+    }
+
+    Test() {
+        System.out.println("Constructor");
+        x++;
+    }
+
+    public static void main(String[] args) {
+
+        System.out.println(x);
+
+        Test t1 = new Test();
+
+        System.out.println(x);
+
+        Test t2 = new Test();
+
+        System.out.println(x);
+    }
+}
+OUTPUT : The execution order in Java is:
+
+Class Loading → Static Variable Initialization → Static Block → main() Method → Instance Initialization Block → Constructor
+
+Static members execute only once when the class is loaded, whereas the instance block and constructor execute every time a new object is created.
+
