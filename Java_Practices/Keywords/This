@@ -1,0 +1,142 @@
+## Problem 1 – Mobile (Constructor Overloading)
+
+class Mobile {
+
+    String brand;
+    int price;
+
+    Mobile() {
+        brand = "Samsung";
+        price = 20000;
+    }
+
+    Mobile(String brand) {
+        this.brand = brand;
+        this.price = 25000;
+    }
+
+    Mobile(String brand, int price) {
+        this.brand = brand;
+        this.price = price;
+    }
+
+    void display() {
+        System.out.println("Brand : " + brand);
+        System.out.println("Price : " + price);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        Mobile m1 = new Mobile();
+        Mobile m2 = new Mobile("Nokia");
+        Mobile m3 = new Mobile("Apple", 85000);
+
+        m1.display();
+        m2.display();
+        m3.display();
+    }
+}
+```
+
+---
+
+## Problem 2 – BankAccount (Constructor Chaining using `this()`)
+
+```java
+class BankAccount {
+
+    int accountNumber;
+    String accountHolder;
+    int balance;
+
+    BankAccount() {
+        this(1, "Unknown", 0);
+    }
+
+    BankAccount(String accountHolder) {
+        this(2, accountHolder, 0);
+    }
+
+    BankAccount(String accountHolder, int balance) {
+        this(3, accountHolder, balance);
+    }
+
+    BankAccount(int accountNumber, String accountHolder, int balance) {
+        this.accountNumber = accountNumber;
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+    }
+
+    void display() {
+        System.out.println("Account Number : " + accountNumber);
+        System.out.println("Account Holder : " + accountHolder);
+        System.out.println("Balance        : " + balance);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+
+        BankAccount b1 = new BankAccount();
+        BankAccount b2 = new BankAccount("Stark");
+        BankAccount b3 = new BankAccount("Tony", 35000);
+
+        b1.display();
+        b2.display();
+        b3.display();
+    }
+}
+```
+
+---
+
+## Problem 3 – Employee (Interview-Level Constructor Design)
+
+```java
+class Employee {
+
+    int id;
+    String name;
+    String department;
+    double salary;
+
+    Employee() {
+        this(101, "Unknown", "Trainee", 15000);
+    }
+
+    Employee(String name) {
+        this(101, name, "Trainee", 15000);
+    }
+
+    Employee(String name, String department) {
+        this(102, name, department, 30000);
+    }
+
+    Employee(int id, String name, String department, double salary) {
+        this.id = id;
+        this.name = name;
+        this.department = department;
+        this.salary = salary;
+    }
+
+    void display() {
+        System.out.println("ID         : " + id);
+        System.out.println("Name       : " + name);
+        System.out.println("Department : " + department);
+        System.out.println("Salary     : " + salary);
+        System.out.println("----------------------------");
+    }
+
+    public static void main(String[] args) {
+
+        Employee e1 = new Employee();
+        Employee e2 = new Employee("Tony");
+        Employee e3 = new Employee("Steve", "Developer");
+        Employee e4 = new Employee(110, "Stark", "Manager", 85000);
+
+        e1.display();
+        e2.display();
+        e3.display();
+        e4.display();
+    }
+}
